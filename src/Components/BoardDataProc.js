@@ -25,7 +25,6 @@ const rows = [
 
 const BoardDataProc = ({match, history, location}) => {
   const {type} = match.params;
-  alert(type);
   const state = location.state;
 
   let send;
