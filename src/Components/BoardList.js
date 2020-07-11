@@ -81,8 +81,12 @@ TablePaginationActions.propTypes = {
 
 const columns = [
   {
+    id: 'ID', label: 'ID', minWidth: 50,
+    align: 'left', width: '10%'
+  },
+  {
     id: 'title', label: 'Title', minWidth: '*',
-    align: 'left', width: '*'
+    align: 'left', width: '*%'
   },
   {
     id: 'writer', label: 'writer', minWidth: 100,
@@ -196,6 +200,7 @@ export default function CustomPaginationActionsTable() {
                 >
                   {row.code}
                 </TableCell>
+                <TableCell align="left">{row.title}</TableCell>
                 <TableCell align="right">{row.writer}</TableCell>
                 <TableCell align="right">{row.date}</TableCell>
               </TableRow>
