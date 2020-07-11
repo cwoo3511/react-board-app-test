@@ -200,7 +200,22 @@ export default function CustomPaginationActionsTable() {
                 >
                   {row.code}
                 </TableCell>
-                <TableCell align="left">{row.title}</TableCell>
+                <TableCell className={classes.link} scope="row" align="left"
+                  onClick={() => history.push({
+                      pathname: '/main/boardList/detail',
+                      state: {
+                        index: index,
+                        code: row.code,
+                        title: row.title,
+                        writer: row.writer,
+                        date: row.date,
+                        content: row.content
+                      }
+                  })}
+                >
+                {row.title}
+                </TableCell>
+
                 <TableCell align="right">{row.writer}</TableCell>
                 <TableCell align="right">{row.date}</TableCell>
               </TableRow>
